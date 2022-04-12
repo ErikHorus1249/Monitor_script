@@ -14,7 +14,7 @@
     -h     Help!
 ### Run:
 
-    $ ./Linux/overheat.sh
+    $ ./Linux/systemd.sh
 
 ### Log: (limited 50% RAM usage)
 

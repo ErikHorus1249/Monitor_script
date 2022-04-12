@@ -1,15 +1,17 @@
 @echo off
 
+@REM runbash script with administrator
 set "params=%*"
 cd /d "%~dp0" && ( if exist "%temp%\getadmin.vbs" del "%temp%\getadmin.vbs" ) && fsutil dirty query %systemdrive% 1>nul 2>nul || (  echo Set UAC = CreateObject^("Shell.Application"^) : UAC.ShellExecute "cmd.exe", "/k cd ""%~sdp0"" && %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs" && "%temp%\getadmin.vbs" && exit /B )
 
 Title Batch Script to get CPU %% and MEM %% Usage
 
 setlocal
-
 set "CpuUsage=0"
 set "Processors=0"
-set "SplunkHome=C:\Users\samiz\Videos\Splunk\splunk\bin"
+
+@REM example: set "SplunkHome=C:\Program Files\Splunk\bin"
+set "SplunkHome=ADD YOUR SPLUNK_HOME PATH!"
 
 %SystemRoot%\System32\wbem\wmic.exe CPU get loadpercentage >"%TEMP%\cpu_usage.tmp"
 for /F "skip=1" %%P in ('type "%TEMP%\cpu_usage.tmp"') do (
@@ -46,8 +48,7 @@ if "%Processors%" == "1" (
     set "ProcessorInfo= of %Processors% processors"
 )
 
-@REM echo(   Memory usage   :  %UsedPercent%
-
+@REM Main loop 
 :loop
     if %UsedPercent% gtr 80 (
         echo Memory usage: %UsedPercent%

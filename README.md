@@ -3,6 +3,7 @@
 ## I. Linux environment
 
 ``` $ sudo chmod a+x Linux/overheat.log```
+``` $ sudo chmod a+x Linux/systemd.log```
 
 ### Help:
 
@@ -14,9 +15,9 @@
     -h     Help!
 ### Run:
 
-    $ ./Linux/systemd.sh
+    $ ./Linux/overheat.sh
 
-### Log: (limited 50% RAM usage)
+### Log: (limit 50% RAM usage)
 
     2022-04-12  10:20:46 Caution! High RAM usage, in use is: 53%
     
@@ -51,7 +52,6 @@
     2022-04-12  10:22:47 Retarted Splunk!
     
     2022-04-12  10:23:27 Caution! High RAM usage, in use is: 53%
-
 
 
 https://itnext.io/how-to-run-your-scripts-on-startup-in-windows-8ae62a625f6c

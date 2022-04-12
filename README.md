@@ -16,7 +16,7 @@
 
     $ ./Linux/overheat.sh
 
-### Log: (limit 50% RAM usage)
+### Log: (limited 50% RAM usage)
 
     2022-04-12  10:20:46 Caution! High RAM usage, in use is: 53%
     

@@ -52,3 +52,6 @@
     
     2022-04-12  10:23:27 Caution! High RAM usage, in use is: 53%
 
+
+
+https://itnext.io/how-to-run-your-scripts-on-startup-in-windows-8ae62a625f6c

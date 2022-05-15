@@ -4,7 +4,6 @@
 LOGFILE="nginxrl.log"
 LOGDIR="/var/log/nginxrl"
 LOGPATH="${LOGDIR}/${LOGFILE}"
-# SPLUNK_HOME="/opt/splunk/bin/splunk"
 TIMESTAMP=`date "+%Y-%m-%d %H:%M:%S"`
 #-------------------------------COLOR------------------------#
 YL='\033[1;33m'
